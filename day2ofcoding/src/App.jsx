@@ -9,7 +9,7 @@ function App() {
   // const [counter, setcounter] = useState(10)
 
   // its not mandatory to write setxyz we can write anything but for simplify we use set 
-  let [counter, setcounter] = useState(3)
+  const [counter, setcounter] = useState(3)
 // let counter = 15
 
 const addvalue = ()=>{
@@ -25,6 +25,20 @@ const addvalue = ()=>{
 const removeValue = ()=>{
   if(counter >= 1){
     setcounter(counter - 1)
+
+// FOR INTERVIEW PRACTICE 
+// TELL ME WHAT HAPPENDED NEXT AND WHY
+
+    // setcounter(counter - 1)
+    // setcounter(counter - 1)
+    // setcounter(counter - 1)
+    // setcounter(counter - 1)
+
+    // ANSWER: SO IN THIS SENARIO IT WILL NOT UPDATE 4 TIMES BECAUSE OF FIBER (IN FIBER IT WILL UPDATE IN BACHES{IN SIMPLE LANG BULK}) SO IT CHECK AMD KNOW THAT THIS IS SAME WORK WE ARE DOING AGAIN AGAIN SO rEACT WILL PUSH ONLY  ONE TIME 
+    // BUT IF WE NEED TO UPDATE VALUE LIKE THIS WE CAN WRITE CODE LIKE 
+    // setcounter((PRECOUNTER)=> PRECOUNTER - 1)
+    // WE CAN WRITE ANY NAME BUT FOR UNDERSTANDING WE USE PRECOUNTER ---IT WILL CHANGE SET___ STATE 
+
   }else{
     alert("you reached minimum value")
   }
