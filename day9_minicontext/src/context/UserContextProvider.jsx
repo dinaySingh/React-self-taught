@@ -4,7 +4,6 @@ import { useState } from "react";
 
 const UserContextProvider = ({children})=> {
     const [user , setUser] = useState(null)
-    // const [user, setuser] = useState(null)
 return (
     <UserContext.Provider value={{user, setUser}}>
         {children}
